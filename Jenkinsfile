@@ -1,15 +1,16 @@
-pipeline { 
-  
-   agent any
+pipeline {
+    agent any
 
-   stages {
-   
-     stage('Install Dependencies') { 
-        steps { 
-           sh 'npm install' 
+    environment {
+        PATH = "/opt/homebrew/bin:$PATH"
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
         }
-     }
-     
+        
      stage('Test') { 
         steps { 
            sh 'echo "testing application..."'
@@ -21,8 +22,6 @@ pipeline {
            sh 'echo "deploying application..."'
          }
 
-     }
-  
-   	}
-
-   }
+     }        
+    }
+}
