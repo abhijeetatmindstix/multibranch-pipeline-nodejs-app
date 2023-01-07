@@ -22,13 +22,13 @@
 
 Setup Jenkins job 
 
-## Fork nodejs applicaton onto your repository 
+### Fork nodejs applicaton onto your repository 
 
 Github URL: https://github.com/ravdy/nodejs.git
 
 Using simple "hello world" application from the [nodejs.org](https://nodejs.org/en/docs/guides/getting-started-guide/) website
 
-## On Jenkins GUI 
+### On Jenkins GUI 
 
 1. Create the new FreeStyle Project 
    ```sh
@@ -40,4 +40,4 @@ Using simple "hello world" application from the [nodejs.org](https://nodejs.org/
    tar czf easyio.tar-$BUILD_NUMBER.gz node_modules main.js package.json public LICENSE
    ```
 
-## To Deploy on nodejs application server 
+### To Deploy on nodejs application server 
