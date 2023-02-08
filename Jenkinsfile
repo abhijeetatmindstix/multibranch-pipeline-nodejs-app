@@ -22,21 +22,7 @@ pipeline {
            sh 'echo "deploying application..."'
          }
 
-     }
-              post {
-                always {
-                  script {
-                    def previousBuild = currentBuild.previousBuild
-                    if (previousBuild != null) {
-                      def previousBuildUrl = previousBuild.getUrl() + "doAbort"
-                      def response = httpRequest url: previousBuildUrl, httpMode: "POST"
-                      if (response.status == 200) {
-                        echo "Previous build was successfully aborted"
-                      } else {
-                        echo "Failed to abort previous build: ${response.status} ${response.statusText}"
-                      }
-                    }
-                  }        
-            }
-        }
-    }             
+     }       
+   }
+  }
+        
