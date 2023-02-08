@@ -31,12 +31,24 @@
 
 pipeline {
   agent any
+        
+     environment {
+         PATH = "/opt/homebrew/bin:$PATH"
+    }        
+        
   stages {
     stage('Build') {
       steps {
-        // Your build steps here
+        sh 'npm install'
       }
     }
+          
+     stage('Test') { 
+        steps { 
+            sh 'echo "testing application..."'
+         }
+      }          
+          
   }
   post {
     always {
