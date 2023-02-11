@@ -14,14 +14,14 @@ pipeline {
         }
         
      stage('Test') { 
-        steps { 
-           sh 'echo "testing application..."'
+           steps { 
+              sh 'echo "testing application..."'
         }
       }
 
-      stage("Deploy nodejs application") { 
-         steps { 
-           sh 'echo "deploying application..."'
+     stage("Deploy nodejs application") { 
+           steps { 
+              sh 'echo "deploying application..."'
          }
         stage("Cancel Older Builds") {
             steps {
