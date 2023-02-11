@@ -38,7 +38,9 @@ void call(Map map = [:]) {
 
 pipeline {
     agent any
-
+    options {
+        disableConcurrentBuilds(abortPrevious: true)
+    }
     environment {
         PATH = "/opt/homebrew/bin:$PATH"
     }
