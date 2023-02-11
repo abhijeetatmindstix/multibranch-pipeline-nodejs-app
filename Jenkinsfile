@@ -23,6 +23,7 @@ pipeline {
            steps { 
               sh 'echo "deploying application..."'
          }
+     }  
         stage("Cancel Older Builds") {
             steps {
                 timeout(time: 10, unit: 'MINUTES') {
