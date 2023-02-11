@@ -32,14 +32,7 @@ pipeline {
             }
         }
       }
-      
-        stage('Wait') {
-            steps {
-                timeout(time: 5, unit: 'MINUTES') {
-                    input message: "Waiting for 5 minutes before continuing..."
-                }
-            }
-        }   
+         
     } 
 
 
